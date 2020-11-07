@@ -34,6 +34,8 @@ module.exports = async(req, res) => {
         size: size,
         total: total,
         totalpage: totalpage,
+        price1: req.query.price1,
+        price2: req.query.price2,
         title: req.query.title
     })
 }

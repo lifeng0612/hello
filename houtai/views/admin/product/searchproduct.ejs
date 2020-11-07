@@ -25,7 +25,7 @@
                 <div class="panel panel-default">
                     <div class="panel-footer">搜索</div>
                     <div class="panel-body" style="padding: 6px !important; margin-left: 0 !important; margin-right: 0 !important;">
-                        <form class="navbar-form navbar-left" action="/admin/searchproduct?page=<%=page%>" style="padding: 0 !important;">
+                        <form class="navbar-form navbar-left" action="/admin/searchproduct" style="padding: 0 !important;">
                             <div class="form-group">
                                 <label for="">名称</label>
                                 <input type="text" name="title" class="form-control" placeholder="请输入名称">
@@ -83,19 +83,19 @@
                 <div>
                     <ul class="pagination">
                         <li><a href="">总共<span><%=total%></span>条数据</a></li>
-                        <li><a href="/admin/searchproduct?page=1">首页</a></li>
-                        <li class="<%=page==1?'disabled':''%>"><a href="/admin/searchproduct?page=<%=page-1%>">上一页</a>
+                        <li><a href="/admin/searchproduct?page=1&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">首页</a></li>
+                        <li class="<%=page==1?'disabled':''%>"><a href="/admin/searchproduct?page=<%=page-1%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">上一页</a>
                         </li>
 
                         <%for(var i=1;i<=totalpage;i++){%>
                             <li class="<%=page==i?'active':''%>">
-                                <a href="/admin/searchproduct?page=<%=i%>">
+                                <a href="/admin/searchproduct?page=<%=i%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">
                                     <%=i%>
                                 </a>
                             </li>
                             <%}%>
-                                <li class="<%=page==totalpage?'disabled':''%>"><a href="/admin/searchproduct?page=<%=page=page<totalpage?page+1:totalpage%>">下一页</a></li>
-                                <li><a href="/admin/searchproduct?page=<%=totalpage%>">尾页</a></li>
+                                <li class="<%=page==totalpage?'disabled':''%>"><a href="/admin/searchproduct?page=<%=page=page<totalpage?page+1:totalpage%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">下一页</a></li>
+                                <li><a href="/admin/searchproduct?page=<%=totalpage%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">尾页</a></li>
                     </ul>
                 </div>
             </div>

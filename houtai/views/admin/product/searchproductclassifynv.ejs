@@ -95,19 +95,19 @@
                 <div>
                     <ul class="pagination">
                         <li><a href="">总共<span><%=total%></span>条数据</a></li>
-                        <li><a href="/admin/searchproductclassifynv?page=1">首页</a></li>
-                        <li class="<%=page==1?'disabled':''%>"><a href="/admin/searchproductclassifynv?page=<%=page-1%>">上一页</a>
+                        <li><a href="/admin/searchproductclassifynv?page=1&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">首页</a></li>
+                        <li class="<%=page==1?'disabled':''%>"><a href="/admin/searchproductclassifynv?page=<%=page-1%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">上一页</a>
                         </li>
 
                         <%for(var i=1;i<=totalpage;i++){%>
                             <li class="<%=page==i?'active':''%>">
-                                <a href="/admin/searchproductclassifynv?page=<%=i%>">
+                                <a href="/admin/searchproductclassifynv?page=<%=i%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">
                                     <%=i%>
                                 </a>
                             </li>
                             <%}%>
-                                <li class="<%=page==totalpage?'disabled':''%>"><a href="/admin/searchproductclassifynv?page=<%=page=page<totalpage?page+1:totalpage%>">下一页</a></li>
-                                <li><a href="/admin/searchproductclassifynv?page=<%=totalpage%>">尾页</a></li>
+                                <li class="<%=page==totalpage?'disabled':''%>"><a href="/admin/searchproductclassifynv?page=<%=page=page<totalpage?page+1:totalpage%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">下一页</a></li>
+                                <li><a href="/admin/searchproductclassifynv?page=<%=totalpage%>&title=<%=title%>&price1=<%=price1%>&price2=<%=price2%>">尾页</a></li>
                     </ul>
                 </div>
             </div>
