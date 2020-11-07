@@ -56,7 +56,21 @@ router.post("/productdel", require("./admin-router/product-touter/productdel"))
 //搜索商品
 router.get("/searchproduct", require("./admin-router/product-touter/searchproduct"))
 
+//商品分类男
+router.get("/productclassify", require("./admin-router/product-touter/productclassify"))
+    //商品分类女
+router.get("/productclassifynv", require("./admin-router/product-touter/productclassifynv"))
+    //商品分类童
+router.get("/productclassifyto", require("./admin-router/product-touter/productclassifyto"))
 
 
+//搜索分类男
+router.get("/searchproductclassify", require("./admin-router/product-touter/searchproductclassify"))
+
+//搜索分类女
+router.get("/searchproductclassifynv", require("./admin-router/product-touter/searchproductclassifynv"))
+
+//搜索分类童
+router.get("/searchproductclassifyto", require("./admin-router/product-touter/searchproductclassifyto"))
 
 module.exports = router

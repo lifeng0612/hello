@@ -11,6 +11,9 @@ const ProductSchema = new mongoose.Schema({
         maxlength: 18,
         trim: true
     },
+    cate_id: {
+        type: String
+    },
     pic: {
         type: String
     },
